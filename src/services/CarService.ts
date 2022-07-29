@@ -37,8 +37,7 @@ class CarService implements IService<ICar> {
     if (!parsed.success) {
       throw parsed.error; 
     }
-    const carExists = await this.readOne(_id);
-    if (!carExists) throw new Error('Car not Exists');
+    await this.readOne(_id);
     return this._car.update(_id, obj);
   }
 
