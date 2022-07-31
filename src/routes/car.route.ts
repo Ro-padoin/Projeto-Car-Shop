@@ -3,16 +3,16 @@ import CarController from '../controllers/CarController';
 import CarModel from '../models/CarModel';
 import CarService from '../services/CarService';
 
-const carRouter = Router();
+const car = Router();
  
-const car = new CarModel();
-const carService = new CarService(car);
-const carController = new CarController(carService);
+const model = new CarModel();
+const service = new CarService(model);
+const controller = new CarController(service);
 
-carRouter.get('/cars', (req, res) => carController.read(req, res));
-carRouter.get('/cars/:id', (req, res) => carController.readOne(req, res));
-carRouter.post('/cars', (req, res) => carController.create(req, res));
-carRouter.put('/cars/:id', (req, res) => carController.update(req, res));
-carRouter.delete('/cars/:id', (req, res) => carController.delete(req, res));
+car.get('/cars', (req, res) => controller.read(req, res));
+car.get('/cars/:id', (req, res) => controller.readOne(req, res));
+car.post('/cars', (req, res) => controller.create(req, res));
+car.put('/cars/:id', (req, res) => controller.update(req, res));
+car.delete('/cars/:id', (req, res) => controller.delete(req, res));
 
-export default carRouter;
+export default car;
