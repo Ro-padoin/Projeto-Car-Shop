@@ -15,7 +15,8 @@ class CarService implements IService<ICar> {
     if (!parsed.success) {
       throw parsed.error;
     }
-    return this._car.create(obj);
+    const newCar = await this._car.create(obj);
+    return newCar;
   }
 
   public async read(): Promise<ICar[]> {
@@ -37,7 +38,7 @@ class CarService implements IService<ICar> {
     if (!parsed.success) {
       throw parsed.error; 
     }
-    await this.readOne(_id);
+    await this.readOne(_id);   
     return this._car.update(_id, obj);
   }
 
