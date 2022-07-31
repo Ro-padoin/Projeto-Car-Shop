@@ -6,7 +6,7 @@
 
 ## Descricao do Projeto
 
-Projeto desenvolvido no bloco 30 - Modulo 3 - Desenvolvimento em BackEnd na turma 17 - Trybe. Conteudos aplicados: Typescript, POO, SOLID, Arquitetura MSC, MongoDB e ODM Mongoose. .
+Projeto desenvolvido no bloco 30 - Modulo 3 - Desenvolvimento em BackEnd na turma 17 - Trybe. Conteudos aplicados: Typescript, POO, SOLID, Arquitetura MSC, MongoDB e ODM Mongoose.
 
 <br/>
 
